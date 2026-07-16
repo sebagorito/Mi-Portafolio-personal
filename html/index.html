@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- Importar JetBrains Mono (estilo programación) y Space Grotesk (títulos tech) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Inicio</title>
+  </head>
+  <body class="fondo">
+    <header>
+      <nav class="navbar fixed-top">
+        <div
+          class="container-fluid mx-3 my-2 px-4 py-2 navbar-glass d-flex justify-content-between align-content-center"
+        >
+          <a class="navbar-brand text-blue-deep fw-bold mi-logo" href="#">
+            <i class="bi bi-code-slash"></i>
+          </a>
+
+          <ul class="nav gap-4 align-items-center">
+            <li class="nav-item">
+              <a
+                class="nav-link p-0"
+                href="#"
+                data-bs-toggle="tooltip"
+                title="Inicio"
+              >
+                <i class="bi bi-house-door-fill fs-4"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link p-0"
+                href="#sobre-mi"
+                data-bs-toggle="tooltip"
+                title="Sobre mí"
+              >
+                <i class="bi bi-person-badge fs-4"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link p-0"
+                href="#proyectos"
+                data-bs-toggle="tooltip"
+                title="Proyectos"
+              >
+                <i class="bi bi-folder-fill fs-4"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link p-0"
+                href="#experiencia"
+                data-bs-toggle="tooltip"
+                title="Experiencia"
+              >
+                <i class="bi bi-briefcase-fill fs-4"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link p-0"
+                href="#intereses"
+                data-bs-toggle="tooltip"
+                title="Intereses"
+              >
+                <i class="bi bi-heart-fill fs-4"></i>
+              </a>
+            </li>
+
+            <div class="vr bg-secondary opacity-25" style="height: 20px"></div>
+
+            <li class="nav-item">
+              <button
+                id="btn-idioma"
+                class="btn btn-idioma-custom d-flex align-items-center gap-1 py-1 px-2"
+                data-bs-toggle="tooltip"
+                title="Cambiar idioma / Change language"
+              >
+                <i class="bi bi-globe fs-5"></i>
+                <span id="lang-label" class="fw-bold small">EN</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container" style="margin-top: 120px">
+      <!-- ==================== SECCIÓN 1: INICIO / HERO ==================== -->
+      <section id="inicio" class="row min-vh-75 align-items-center py-5">
+        <div class="col-md-7 order-2 order-md-1">
+          <span
+            class="badge bg-primary-subtle text-primary mb-3 px-3 py-2 rounded-pill fw-semibold"
+            data-value="hero-bienvenida"
+          >
+            ¡Hola, bienvenido/a!
+          </span>
+          <h1 class="display-4 fw-bold text-blue-deep mb-3">
+            <span data-value="hero-saludo">Soy</span>
+            <span class="text-primary">Sebastian Agunin</span>
+          </h1>
+          <h2 class="h4 text-secondary mb-4" data-value="hero-rol">
+            Estudiante Avanzado de Computación & Desarrollador Web
+          </h2>
+          <p class="lead text-muted mb-4" data-value="hero-descripcion">
+            Me apasiona aprender nuevas tecnologías, ser innovador y creativo.
+            Busco siempre mejorar mis habilidades para crear soluciones lo más
+            eficientes posibles, adaptadas a las necesidades de la actualidad.
+            Acá no solo vas a encontrar mis proyectos y habilidades, sino
+            también un espacio donde podrás conocerme un poco más fuera de lo
+            profesional.
+          </p>
+          <div class="d-flex gap-3">
+            <!-- Botón modificado para activar el modal de contacto -->
+            <button
+              type="button"
+              class="btn btn-primary px-4 py-2 rounded-pill fw-medium"
+              data-bs-toggle="modal"
+              data-bs-target="#modalContacto"
+              data-value="hero-btn-contacto"
+            >
+              Contáctame
+            </button>
+            <a
+              href="#proyectos"
+              class="btn btn-outline-secondary px-4 py-2 rounded-pill fw-medium"
+              data-value="hero-btn-proyectos"
+            >
+              Ver proyectos
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-5 order-1 order-md-2 text-center mb-4 mb-md-0">
+          <div class="position-relative d-inline-block">
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 border border-primary rounded-circle translate-middle-x mt-2 ms-2 opacity-25"
+              style="z-index: -1"
+            ></div>
+            <img
+              src="../img/fotomia.jpeg"
+              alt="Sebastian Agunin"
+              class="img-fluid rounded-circle shadow border border-4 border-white"
+              style="width: 320px; height: 320px; object-fit: cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5 opacity-25 text-secondary" />
+
+      <!-- ==================== SECCIÓN 2: SOBRE MÍ & ENFOQUES ==================== -->
+      <section id="sobre-mi" class="py-5">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <i class="bi bi-person-badge text-primary fs-3"></i>
+              <h2 class="fw-bold m-0 text-blue-deep" data-value="sobre-titulo">
+                Sobre mí
+              </h2>
+            </div>
+
+            <div class="text-muted">
+              <p class="mb-3" data-value="sobre-p1">
+                Soy un estudiante de Ciencias de la Computación con un enfoque
+                marcadamente práctico y una mentalidad analítica. Me destaco por
+                mi capacidad para resolver problemas técnicos de forma creativa
+                y por mi firme compromiso con la optimización de procesos.
+              </p>
+              <p class="mb-4" data-value="sobre-p2">
+                Disfruto mucho del trabajo en equipo, enfrentando desafíos
+                lógicos y buscando siempre aportar la máxima eficiencia en cada
+                proyecto técnico que emprendo, ya sea modelando sistemas o
+                desarrollando software interactivo.
+              </p>
+            </div>
+
+            <div class="d-flex gap-3 fs-4 mt-4">
+              <a
+                href="https://github.com/sebagorito"
+                target="_blank"
+                class="text-secondary hover-primary"
+                data-bs-toggle="tooltip"
+                title="GitHub"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/sebastian-agunin/"
+                target="_blank"
+                class="text-secondary hover-primary"
+                data-bs-toggle="tooltip"
+                title="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sebaagunin/"
+                target="_blank"
+                class="text-secondary hover-primary"
+                data-bs-toggle="tooltip"
+                title="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="p-4 rounded-4 bg-white shadow-sm border border-light">
+              <h3
+                class="h5 fw-bold mb-4 text-blue-deep"
+                data-value="sobre-skills-titulo"
+              >
+                Habilidades
+              </h3>
+
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <div class="bg-primary-subtle p-2 rounded-3 text-primary">
+                  <i class="bi bi-braces fs-5"></i>
+                </div>
+                <div>
+                  <h4
+                    class="h6 fw-bold m-0 text-blue-deep"
+                    data-value="skill1-t"
+                  >
+                    Desarrollo Frontend
+                  </h4>
+                  <small class="text-muted" data-value="skill1-d"
+                    >Experiencia con React, JavaScript (ES6+), HTML5, CSS y
+                    Bootstrap.</small
+                  >
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <div class="bg-primary-subtle p-2 rounded-3 text-primary">
+                  <i class="bi bi-diagram-3 fs-5"></i>
+                </div>
+                <div>
+                  <h4
+                    class="h6 fw-bold m-0 text-blue-deep"
+                    data-value="skill2-t"
+                  >
+                    Modelado y POO
+                  </h4>
+                  <small class="text-muted" data-value="skill2-d"
+                    >Diseño Orientado a Objetos y modelado de sistemas complejos
+                    con UML.</small
+                  >
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3">
+                <div class="bg-primary-subtle p-2 rounded-3 text-primary">
+                  <i class="bi bi-terminal fs-5"></i>
+                </div>
+                <div>
+                  <h4
+                    class="h6 fw-bold m-0 text-blue-deep"
+                    data-value="skill3-t"
+                  >
+                    Multi-paradigma
+                  </h4>
+                  <small class="text-muted" data-value="skill3-d font-monospace"
+                    >Dominio de lógica abstracta con Java, C y paradigma lógico
+                    en Prolog.</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5 opacity-25 text-secondary" />
+
+      <!-- ==================== SECCIÓN 3: EDUCACIÓN ==================== -->
+      <section id="estudios" class="py-5">
+        <div class="d-flex align-items-center gap-2 mb-5">
+          <i class="bi bi-mortarboard-fill text-primary fs-3"></i>
+          <h2 class="fw-bold m-0 text-blue-deep" data-value="estudios-titulo">
+            Educación
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-lg-9 mx-auto">
+            <div
+              class="position-relative ps-4 border-start border-2 border-primary-subtle"
+            >
+              <!-- Tecnicatura -->
+              <div class="mb-5 position-relative">
+                <div
+                  class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle"
+                  style="
+                    width: 14px;
+                    height: 14px;
+                    margin-left: -25px;
+                    margin-top: 6px;
+                  "
+                ></div>
+                <span
+                  class="badge bg-primary-subtle text-primary mb-2 rounded-pill fw-semibold"
+                  data-value="edu1-fecha"
+                  >2026 - Actualidad</span
+                >
+                <h3
+                  class="h5 fw-bold text-blue-deep m-0"
+                  data-value="edu1-titulo"
+                >
+                  Tecnicatura en Programación Web y Móvil
+                </h3>
+                <h4
+                  class="h6 text-muted mb-2 fw-medium"
+                  data-value="edu1-institucion"
+                >
+                  Universidad Nacional del Sur
+                </h4>
+                <p class="text-muted small mb-0" data-value="edu1-descripcion">
+                  Enfoque técnico enfocado en la construcción de interfaces
+                  adaptables, optimización de entornos móviles y arquitecturas
+                  web modernas.
+                </p>
+              </div>
+
+              <!-- Licenciatura -->
+              <div class="mb-5 position-relative">
+                <div
+                  class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle"
+                  style="
+                    width: 14px;
+                    height: 14px;
+                    margin-left: -25px;
+                    margin-top: 6px;
+                  "
+                ></div>
+                <span
+                  class="badge bg-primary-subtle text-primary mb-2 rounded-pill fw-semibold"
+                  data-value="edu2-fecha"
+                  >2021 - Actualidad</span
+                >
+                <h3
+                  class="h5 fw-bold text-blue-deep m-0"
+                  data-value="edu2-titulo"
+                >
+                  Licenciatura en Ciencias de la Computación
+                </h3>
+                <h4
+                  class="h6 text-muted mb-2 fw-medium"
+                  data-value="edu2-institucion"
+                >
+                  Universidad Nacional del Sur
+                </h4>
+                <p class="text-muted small mb-0" data-value="edu2-descripcion">
+                  Formación avanzada y analítica basada en fundamentos lógicos,
+                  diseño de algoritmos, análisis de complejidad y desarrollo de
+                  software robusto.
+                </p>
+              </div>
+
+              <!-- Secundaria -->
+              <div class="position-relative">
+                <div
+                  class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle"
+                  style="
+                    width: 14px;
+                    height: 14px;
+                    margin-left: -25px;
+                    margin-top: 6px;
+                  "
+                ></div>
+                <span
+                  class="badge bg-primary-subtle text-primary mb-2 rounded-pill fw-semibold"
+                  data-value="edu3-fecha"
+                  >2015 - 2017</span
+                >
+                <h3
+                  class="h5 fw-bold text-blue-deep m-0"
+                  data-value="edu3-titulo"
+                >
+                  Bachiller en Informática
+                </h3>
+                <h4
+                  class="h6 text-muted mb-2 fw-medium"
+                  data-value="edu3-institucion"
+                >
+                  Escuela Superior de Comercio (UNS)
+                </h4>
+                <p class="text-muted small mb-0" data-value="edu3-descripcion">
+                  Primeros pasos orientados a la tecnología, fundamentos de
+                  desarrollo de software y sistemas de información informática.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5 opacity-25 text-secondary" />
+
+      <!-- ==================== SECCIÓN 4: PROYECTOS DESTACADOS ==================== -->
+      <section id="proyectos" class="py-5">
+        <div class="d-flex align-items-center gap-2 mb-4">
+          <i class="bi bi-folder-fill text-primary fs-3"></i>
+          <h2 class="fw-bold m-0 text-blue-deep" data-value="proyectos-titulo">
+            Proyectos Académicos
+          </h2>
+        </div>
+
+        <div class="row g-4">
+          <!-- E-commerce -->
+          <div class="col-md-6">
+            <div
+              class="p-4 rounded-4 bg-white shadow-sm border border-light h-100 transition-hover"
+            >
+              <span class="badge bg-dark-subtle text-dark mb-2 font-monospace"
+                >Html + CSS + JavaScript</span
+              >
+              <h3
+                class="h5 fw-bold text-blue-deep mb-2"
+                data-value="proj1-titulo"
+              >
+                E-commerce
+              </h3>
+              <p class="text-muted small" data-value="proj1-desc">
+                Co-desarrollo de una plataforma web Serverless con arquitectura
+                limpia en JavaScript (ES6) y Bootstrap 5. Programé la lógica de
+                negocio en el cliente, gestioné la persistencia de datos
+                (usuarios, stock y auditoría) mediante LocalStorage y diseñé
+                paneles independientes para clientes y administradores.
+                Desarrollo coordinado con metodologías ágiles y Git/GitHub.
+              </p>
+              <div class="d-flex gap-2 mt-3">
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  id="btn-ver-mas-ecommerce"
+                >
+                  ver mas
+                </button>
+                <a
+                  href="https://github.com/sebagorito/repositorio-PIPW-comision18-WEB"
+                  target="_blank"
+                  class="text-secondary hover-primary"
+                  data-bs-toggle="tooltip"
+                  title="GitHub"
+                >
+                  <i class="bi bi-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- M2 Blocks -->
+          <div class="col-md-6">
+            <div
+              class="p-4 rounded-4 bg-white shadow-sm border border-light h-100 transition-hover"
+            >
+              <span class="badge bg-dark-subtle text-dark mb-2 font-monospace"
+                >React + Prolog</span
+              >
+              <h3
+                class="h5 fw-bold text-blue-deep mb-2"
+                data-value="proj1-titulo"
+              >
+                M2 Blocks
+              </h3>
+              <p class="text-muted small" data-value="proj1-desc">
+                Desarrollo en equipo de una implementación híbrida de juego.
+                Diseñado utilizando React para la construcción de una interfaz
+                de usuario limpia e interactiva en el frontend, integrada de
+                forma eficiente con Prolog para la resolución de toda la lógica
+                declarativa interna.
+              </p>
+              <div class="d-flex gap-2 mt-3">
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  id="btn-ver-mas-m2blocks"
+                >
+                  ver mas
+                </button>
+                <a
+                  href="https://github.com/sebagorito/proyectoLogica"
+                  target="_blank"
+                  class="text-secondary hover-primary"
+                  data-bs-toggle="tooltip"
+                  title="GitHub"
+                >
+                  <i class="bi bi-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Super Mario Bros -->
+          <div class="col-md-6">
+            <div
+              class="p-4 rounded-4 bg-white shadow-sm border border-light h-100 transition-hover"
+            >
+              <span class="badge bg-dark-subtle text-dark mb-2 font-monospace"
+                >Java (POO) + UML</span
+              >
+              <h3
+                class="h5 fw-bold text-blue-deep mb-2"
+                data-value="proj2-titulo"
+              >
+                Recreación de Super Mario Bros
+              </h3>
+              <p class="text-muted small" data-value="proj2-desc">
+                Proyecto colaborativo enfocado en modelado y arquitectura de
+                software. Diseñado completamente con diagramas de clases y
+                secuencia en UML bajo el paradigma POO. Implementación integral
+                en Java nativo de físicas de colisiones, renderizado y gestión
+                de estados para 3 niveles de juego. Utilizamos los conceptor de
+                clean code y principios SOLID para mantener un código modular y
+                escalable.
+              </p>
+              <div class="d-flex gap-2 mt-3">
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  id="btn-ver-mas-supermario"
+                >
+                  ver mas
+                </button>
+                <a
+                  href=" https://github.com/sebagorito/Proyecto-Tecnologia-de-Programacion"
+                  target="_blank"
+                  class="text-secondary hover-primary"
+                  data-bs-toggle="tooltip"
+                  title="GitHub"
+                >
+                  <i class="bi bi-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5 opacity-25 text-secondary" />
+
+      <!-- ==================== SECCIÓN 5: EXPERIENCIA LABORAL ==================== -->
+      <section id="experiencia" class="py-5">
+        <div class="d-flex align-items-center gap-2 mb-4">
+          <i class="bi bi-briefcase-fill text-primary fs-3"></i>
+          <h2
+            class="fw-bold m-0 text-blue-deep"
+            data-value="experiencia-titulo"
+          >
+            Experiencia Laboral
+          </h2>
+        </div>
+        <div class="row g-4">
+          <!-- Impresión 3D -->
+          <div class="col-md-4">
+            <div
+              class="p-4 rounded-4 bg-white shadow-sm border border-light h-100 transition-hover"
+            >
+              <div class="text-primary mb-3">
+                <i class="bi bi-box-seam fs-3"></i>
+              </div>
+              <h3 class="h5 fw-bold text-blue-deep mb-2" data-value="hobby2-t">
+                Impresión & Diseño 3D
+              </h3>
+              <p class="text-muted small m-0" data-value="hobby2-d">
+                Gestioné una flota de 30 unidades de impresión en simultáneo.
+                Aprendí optimización de recursos en flujos de trabajo, modelado
+                de piezas funcionales y *troubleshooting* técnico avanzado tanto
+                de hardware como en configuración de software.
+              </p>
+              <button
+                class="btn btn-outline-secondary btn-sm mt-3"
+                data-bs-toggle="modal"
+                data-bs-target="#modalImpresion3D"
+                id="btn-ver-mas-impresion3d"
+              >
+                ver mas
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5 opacity-25 text-secondary" />
+
+      <!-- ==================== SECCIÓN 6: HOBBIES ==================== -->
+      <section id="intereses" class="py-5">
+        <div class="d-flex align-items-center gap-2 mb-4">
+          <i class="bi bi-heart-fill text-primary fs-3"></i>
+          <h2 class="fw-bold m-0 text-blue-deep" data-value="intereses-titulo">
+            Más allá del código
+          </h2>
+        </div>
+
+        <div class="row g-4">
+          <!-- Futsal -->
+          <div class="col-md-4">
+            <div
+              class="p-4 rounded-4 bg-white shadow-sm border border-light h-100 transition-hover"
+            >
+              <div class="text-primary mb-3">
+                <i class="bi bi-dribbble fs-3"></i>
+              </div>
+              <h3 class="h5 fw-bold text-blue-deep mb-2" data-value="hobby1-t">
+                Futsal Liga del Sur
+              </h3>
+              <p class="text-muted small m-0" data-value="hobby1-d">
+                Practico futsal hace mas de 5 años en al Liga del sur.
+                Actualmente en Villa Mitre. Actualmente es el deporte que mas
+                amo y disfruto, me permite desconectarme de la rutina y
+                mantenerme activo. Me gusta mucho el trabajo en equipo y la
+                estrategia que requiere este deporte.
+              </p>
+              <button
+                class="btn btn-outline-secondary btn-sm mt-3"
+                data-bs-toggle="modal"
+                data-bs-target="#modalFutsal"
+                id="btn-ver-mas-futsal"
+              >
+                ver mas
+              </button>
+            </div>
+          </div>
+          <!-- Futbol liga universitaria -->
+          <div class="col-md-4">
+            <div
+              class="p-4 rounded-4 bg-white shadow-sm border border-light h-100 transition-hover"
+            >
+              <div class="text-primary mb-3">
+                <i class="bi bi-dribbble fs-3"></i>
+              </div>
+              <h3 class="h5 fw-bold text-blue-deep mb-2" data-value="hobby3-t">
+                Futbol Liga Universitaria
+              </h3>
+              <p class="text-muted small m-0" data-value="hobby3-d">
+                Bonanza es un equipo de La liga Universitaria de Bahía Blanca,
+                where juego desde hace 3 años y soy el creador del equipo. Aqui
+                juego con todos mis amigos. disfruto mucho de jugar con ellos y
+                del ambiente que genera la liga.
+              </p>
+              <button
+                class="btn btn-outline-secondary btn-sm mt-3"
+                data-bs-toggle="modal"
+                data-bs-target="#modalFutbol"
+                id="btn-ver-mas-futbol"
+              >
+                ver mas
+              </button>
+            </div>
+          </div>
+          <!-- Mi familia -->
+          <div class="col-md-4">
+            <div
+              class="p-4 rounded-4 bg-white shadow-sm border border-light h-100 transition-hover"
+            >
+              <div class="text-primary mb-3">
+                <i class="bi bi-people fs-3"></i>
+              </div>
+              <h3 class="h5 fw-bold text-blue-deep mb-2" data-value="hobby3-t">
+                Mi familia
+              </h3>
+              <p class="text-muted small m-0" data-value="hobby3-d">
+                Tengo una numerosa familia, con la que me gusta pasar tiempo. Me
+                gusta mucho compartir momentos con ellos y disfrutar de su
+                compañía. Siempre me han apoyado en mis decisiones y me han
+                enseñado valores importantes para la vida.
+              </p>
+              <button
+                class="btn btn-outline-secondary btn-sm mt-3"
+                data-bs-toggle="modal"
+                data-bs-target="#modalFamilia"
+                id="btn-ver-mas-familia"
+              >
+                ver mas
+              </button>
+            </div>
+          </div>
+          <!-- Racing -->
+          <div class="col-md-4">
+            <div
+              class="p-4 rounded-4 bg-white shadow-sm border border-light h-100 transition-hover"
+            >
+              <div class="text-primary mb-3">
+                <i class="bi bi-footballracr fs-3"></i>
+              </div>
+              <h3 class="h5 fw-bold text-blue-deep mb-2" data-value="hobby3-t">
+                Racing club
+              </h3>
+              <p class="text-muted small m-0" data-value="hobby3-d">
+                Soy hincha de Racing club, un equipo de futbol de Argentina. Soy
+                un gran hincha de este equipo. por mas que no viva en la misma
+                ciudad he viajado para verlos y es una actividad que disfruto
+                mucho. Me gusta mucho el futbol y seguir a mi equipo en todas
+                las competiciones.
+              </p>
+              <button
+                class="btn btn-outline-secondary btn-sm mt-3"
+                data-bs-toggle="modal"
+                data-bs-target="#modalRacing"
+                id="btn-ver-mas-racing"
+              >
+                ver mas
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 mt-5 border-top border-light">
+      <div class="container text-center">
+        <p class="small text-muted m-0">
+          © 2026 Sebastian Agunin.
+          <span data-value="footer-texto">Hecho con mucho ♥ .</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Modal Dinámico Único -->
+    <div class="custom-modal-overlay" id="custom-modal">
+      <div class="custom-modal-card">
+        <div class="custom-modal-header">
+          <h3 id="modal-title" class="fw-bold text-blue-deep m-0">
+            Título del Proyecto
+          </h3>
+          <button class="custom-modal-close" id="modal-close-btn">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div class="custom-modal-body">
+          <!-- Contenedor dinámico de imágenes -->
+          <div id="modal-images-container" class="modal-gallery mb-3"></div>
+          <!-- Descripción -->
+          <p id="modal-description" class="text-muted small m-0"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== MODAL DE CONTACTO (REDISEÑO PREMIUM OSCURO) ==================== -->
+    <div
+      class="modal fade"
+      id="modalContacto"
+      tabindex="-1"
+      aria-labelledby="modalContactoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 450px">
+        <!-- Tarjeta con efecto semi-transparente premium (Glassmorphism) -->
+        <div
+          class="modal-content text-light rounded-4 shadow-lg"
+          style="
+            background: rgba(24, 28, 41, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+          "
+        >
+          <!-- Cabecera del Modal -->
+          <div
+            class="modal-header border-0 pb-0 pt-4 px-4 d-flex justify-content-between align-items-center"
+          >
+            <h5
+              class="modal-title fw-bold text-white d-flex align-items-center gap-2"
+              id="modalContactoLabel"
+              style="font-size: 1.25rem; letter-spacing: -0.5px"
+            >
+              <i class="bi bi-chat-right-text text-primary"></i> ¡Hablemos!
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white opacity-75"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="font-size: 0.8rem"
+            ></button>
+          </div>
+
+          <!-- Cuerpo del Modal -->
+          <div class="modal-body px-4 py-3">
+            <p
+              class="text-secondary mb-4"
+              style="font-size: 0.9rem; line-height: 1.5"
+            >
+              Elegí la forma que te resulte más cómoda para ponerte en contacto
+              conmigo. Respondo lo antes posible.
+            </p>
+
+            <!-- SECCIÓN EMAIL: Tarjeta integrada y limpia (sin inputs toscos de formulario) -->
+            <div
+              class="p-3 rounded-4 mb-4"
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.06);
+              "
+            >
+              <span
+                class="text-secondary d-block mb-2 fw-semibold"
+                style="font-size: 0.75rem; uppercase; letter-spacing: 0.5px;"
+                >CORREO ELECTRÓNICO</span
+              >
+              <div
+                class="d-flex align-items-center justify-content-between bg-dark rounded-3 p-2 px-3"
+                style="border: 1px solid rgba(255, 255, 255, 0.05)"
+              >
+                <div class="d-flex align-items-center gap-2 overflow-hidden">
+                  <i class="bi bi-envelope text-primary"></i>
+                  <span
+                    id="user-email-text"
+                    class="text-white-50 font-monospace"
+                    style="font-size: 0.95rem; user-select: all"
+                    >sebagorito@gmail.com</span
+                  >
+                </div>
+                <button
+                  class="btn p-1 text-primary hover-white transition-all"
+                  type="button"
+                  id="btn-copiar-mail"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Copiar mail"
+                  style="border: none; background: transparent"
+                  onclick="
+                    navigator.clipboard.writeText('sebagorito@gmail.com');
+                    this.innerHTML =
+                      '<i class=\'bi bi-check2 text-success fs-5\'></i>';
+                    setTimeout(
+                      () =>
+                        (this.innerHTML = '<i class=\'bi bi-copy fs-6\'></i>'),
+                      2000,
+                    );
+                  "
+                >
+                  <i class="bi bi-copy fs-6"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Redes de contacto -->
+            <span
+              class="text-secondary d-block mb-2 fw-semibold px-1"
+              style="font-size: 0.75rem; uppercase; letter-spacing: 0.5px;"
+              >ENLACES DIRECTOS</span
+            >
+            <div class="d-flex flex-column gap-2">
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/in/sebastian-agunin/"
+                target="_blank"
+                class="d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none transition-all"
+                style="
+                  background: rgba(255, 255, 255, 0.02);
+                  border: 1px solid rgba(255, 255, 255, 0.04);
+                  transition:
+                    background 0.2s ease,
+                    transform 0.2s ease;
+                "
+                onmouseover="
+                  this.style.background = 'rgba(255, 255, 255, 0.06)';
+                  this.style.transform = 'translateY(-1px)';
+                "
+                onmouseout="
+                  this.style.background = 'rgba(255, 255, 255, 0.02)';
+                  this.style.transform = 'none';
+                "
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-linkedin text-primary fs-5"></i>
+                  <div>
+                    <h6
+                      class="mb-0 text-white fw-semibold"
+                      style="font-size: 0.9rem"
+                    >
+                      LinkedIn
+                    </h6>
+                    <small class="text-secondary" style="font-size: 0.75rem"
+                      >Conectemos profesionalmente</small
+                    >
+                  </div>
+                </div>
+                <i
+                  class="bi bi-arrow-up-right text-secondary"
+                  style="font-size: 0.8rem"
+                ></i>
+              </a>
+
+              <!-- GitHub -->
+              <a
+                href="https://github.com/sebagorito"
+                target="_blank"
+                class="d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none transition-all"
+                style="
+                  background: rgba(255, 255, 255, 0.02);
+                  border: 1px solid rgba(255, 255, 255, 0.04);
+                  transition:
+                    background 0.2s ease,
+                    transform 0.2s ease;
+                "
+                onmouseover="
+                  this.style.background = 'rgba(255, 255, 255, 0.06)';
+                  this.style.transform = 'translateY(-1px)';
+                "
+                onmouseout="
+                  this.style.background = 'rgba(255, 255, 255, 0.02)';
+                  this.style.transform = 'none';
+                "
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-github text-white fs-5"></i>
+                  <div>
+                    <h6
+                      class="mb-0 text-white fw-semibold"
+                      style="font-size: 0.9rem"
+                    >
+                      GitHub
+                    </h6>
+                    <small class="text-secondary" style="font-size: 0.75rem"
+                      >Revisá mis repositorios y código</small
+                    >
+                  </div>
+                </div>
+                <i
+                  class="bi bi-arrow-up-right text-secondary"
+                  style="font-size: 0.8rem"
+                ></i>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/sebaagunin/"
+                target="_blank"
+                class="d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none transition-all"
+                style="
+                  background: rgba(255, 255, 255, 0.02);
+                  border: 1px solid rgba(255, 255, 255, 0.04);
+                  transition:
+                    background 0.2s ease,
+                    transform 0.2s ease;
+                "
+                onmouseover="
+                  this.style.background = 'rgba(255, 255, 255, 0.06)';
+                  this.style.transform = 'translateY(-1px)';
+                "
+                onmouseout="
+                  this.style.background = 'rgba(255, 255, 255, 0.02)';
+                  this.style.transform = 'none';
+                "
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-instagram text-danger fs-5"></i>
+                  <div>
+                    <h6
+                      class="mb-0 text-white fw-semibold"
+                      style="font-size: 0.9rem"
+                    >
+                      Instagram
+                    </h6>
+                    <small class="text-secondary" style="font-size: 0.75rem"
+                      >Un poco más sobre mi día a día</small
+                    >
+                  </div>
+                </div>
+                <i
+                  class="bi bi-arrow-up-right text-secondary"
+                  style="font-size: 0.8rem"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pie del Modal con el botón de envío directo funcional -->
+          <div
+            class="modal-footer border-0 pt-2 pb-4 px-4 justify-content-center"
+          >
+            <a
+              href="mailto:sebagorito@gmail.com"
+              class="btn rounded-pill w-100 fw-semibold d-flex align-items-center justify-content-center gap-2 py-2-5 transition-all"
+              style="
+                background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+                color: #fff;
+                border: none;
+                box-shadow: 0 4px 15px rgba(13, 110, 253, 0.2);
+                font-size: 0.95rem;
+                transition:
+                  transform 0.2s,
+                  box-shadow 0.2s;
+              "
+              onmouseover="
+                this.style.transform = 'scale(1.02)';
+                this.style.boxShadow = '0 6px 20px rgba(13, 110, 253, 0.35)';
+              "
+              onmouseout="
+                this.style.transform = 'none';
+                this.style.boxShadow = '0 4px 15px rgba(13, 110, 253, 0.2)';
+              "
+            >
+              <i class="bi bi-send-fill" style="font-size: 0.85rem"></i> Enviar
+              correo directo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

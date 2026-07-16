@@ -1,0 +1,320 @@
+/* Custom Properties - Modo Oscuro: Deep Blue Universe */
+:root {
+  /* Fondos generales y capas */
+  --azul-fondo: #050a18; /* Azul noche profundo (Fondo de pantalla general) */
+  --azul-tarjeta: #0b1426; /* Azul marino oscuro con presencia para elevar las cards */
+  --azul-tarjeta-hover: #121e36; /* Azul más claro para los estados hover */
+
+  /* Textos con excelente contraste */
+  --azul-profundo: #f1f5f9; /* Blanco azulado muy claro para títulos y textos principales (legibilidad premium) */
+  --azul-mutado: #94a3b8; /* Gris azulado medio para textos secundarios y descripciones */
+
+  /* Acentos y brillos */
+  --azul-acento: #3b82f6; /* Azul eléctrico para destacar enlaces, botones y estados activos */
+  --azul-acento-glow: rgba(
+    59,
+    130,
+    246,
+    0.15
+  ); /* Brillo difuminado para sombras */
+
+  /* Componentes translúcidos (Navbar y Modales) */
+  --cristal-azul: rgba(11, 20, 38, 0.75); /* Fondo oscuro semitransparente */
+  --borde-sutil: rgba(
+    59,
+    130,
+    246,
+    0.15
+  ); /* Borde fino con un ligero tinte azul de acento */
+
+  /* Separadores */
+  --azul-borde-interno: #1e293b; /* Líneas de división internas de las cards y modal */
+}
+
+/* Aplicación del fondo general */
+.fondo {
+  background-color: var(--azul-fondo);
+  color: var(--azul-profundo);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Ajustes para las tarjetas de Bootstrap */
+.card,
+.bg-white {
+  background-color: var(--azul-tarjeta) !important;
+  border: 1px solid var(--azul-borde-interno) !important;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.3),
+    0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.card:hover,
+.bg-white:hover {
+  background-color: var(--azul-tarjeta-hover) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  box-shadow:
+    0 12px 20px -5px rgba(0, 0, 0, 0.4),
+    0 0 15px var(--azul-acento-glow);
+}
+
+/* Base del navbar flotante */
+.navbar-glass {
+  background-color: var(--cristal-azul);
+
+  /* EFECTO CRISTAL */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  /* BORDES Y ESTRUCTURA */
+  border-radius: 50px;
+  border: 1px solid var(--borde-sutil);
+  box-shadow:
+    0 10px 30px -10px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(59, 130, 246, 0.05); /* Glow sutil en el navbar */
+
+  max-width: 500px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  transition: all 0.3s ease;
+}
+
+/* Estilo para tu logo principal */
+.mi-logo i {
+  color: var(--azul-acento);
+  text-shadow: 0 0 8px var(--azul-acento-glow);
+  font-size: 1.5rem;
+}
+
+/* Estilo para los íconos del menú */
+.navbar-glass .nav-link i {
+  color: var(--azul-mutado);
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Efecto hover en los íconos */
+.navbar-glass .nav-link:hover i {
+  color: var(--azul-acento);
+  transform: scale(1.1);
+  text-shadow: 0 0 8px var(--azul-acento-glow);
+}
+
+/* Botón de idioma personalizado */
+.btn-idioma-custom {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--azul-mutado);
+  border-radius: 30px;
+  transition: all 0.2s ease;
+}
+
+.btn-idioma-custom:hover {
+  background-color: rgba(
+    59,
+    130,
+    246,
+    0.1
+  ); /* Hover sutil con tinte azul eléctrico */
+  color: var(--azul-profundo);
+  border-color: var(--borde-sutil);
+}
+
+/* Estilos extra para tus textos secundarios */
+.text-muted {
+  color: var(--azul-mutado) !important;
+}
+
+/* --- ESTILOS Y ANIMACIONES DEL MODAL --- */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 7, 18, 0); /* Oscuro puro de fondo */
+  backdrop-filter: blur(0px);
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  perspective: 1200px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    backdrop-filter 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    background-color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.4s ease;
+}
+
+/* Tarjeta del modal con perspectiva 3D inicial */
+.custom-modal-card {
+  background-color: var(--azul-tarjeta);
+  border-radius: 24px;
+  border: 1px solid var(--azul-borde-interno);
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transform: translateY(120px) rotateX(-25deg) rotateY(10deg) scale(0.8);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Cabecera */
+.custom-modal-header {
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid var(--azul-borde-interno);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-modal-header h2 {
+  color: var(--azul-profundo);
+}
+
+.custom-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--azul-mutado);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.custom-modal-close:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #f43f5e; /* Color rosado/rojo suave para el hover del botón de cerrado */
+}
+
+/* Cuerpo del Modal */
+.custom-modal-body {
+  padding: 24px;
+  max-height: 70vh;
+  overflow-y: auto;
+  color: var(--azul-mutado);
+}
+
+/* Galería de imágenes adaptativa */
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  justify-content: center;
+}
+
+/* COMPORTAMIENTO PARA IMAGEN ÚNICA (Como M2 Blocks o Familia) */
+.modal-gallery.has-single-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--azul-borde-interno);
+  transition:
+    transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.3s ease;
+}
+
+.modal-gallery.has-single-image img {
+  width: auto;
+  max-width: 100%;
+  max-height: 380px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-gallery img:hover {
+  transform: scale(1.03) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+}
+
+/* --- CLASES DE CONTROL DE ANIMACIÓN --- */
+
+/* Estado Abierto */
+.custom-modal-overlay.anim-open {
+  opacity: 1;
+  pointer-events: auto;
+  background-color: rgba(
+    3,
+    7,
+    18,
+    0.75
+  ); /* Oscurece el fondo con un azul casi negro */
+  backdrop-filter: blur(10px);
+}
+
+.custom-modal-overlay.anim-open .custom-modal-card {
+  animation: ultraOpen 0.55s cubic-bezier(0.34, 1.75, 0.4, 1) forwards;
+}
+
+/* Estado Cerrado */
+.custom-modal-overlay.anim-close {
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(3, 7, 18, 0);
+  backdrop-filter: blur(0px);
+  transition:
+    backdrop-filter 0.4s ease,
+    background-color 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.custom-modal-overlay.anim-close .custom-modal-card {
+  animation: ultraClose 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* --- KEYFRAMES --- */
+@keyframes ultraOpen {
+  0% {
+    opacity: 0;
+    transform: translateY(120px) rotateX(-25deg) rotateY(10deg) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg) rotateY(0deg) scale(1);
+    box-shadow:
+      0 25px 60px rgba(0, 0, 0, 0.6),
+      0 0 30px rgba(59, 130, 246, 0.1); /* Sutil aura azul en el modal abierto */
+  }
+}
+
+@keyframes ultraClose {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) rotateX(20deg) rotateY(-5deg) scale(0.85);
+  }
+}
