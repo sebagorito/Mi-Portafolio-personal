@@ -22,7 +22,7 @@ const IMAGENES_PROYECTOS = {
   ],
   futbol: [
     "../img/hobbies/bonanza1.jpg",
-    "../img/hobbies/bonanza2.jpeg",
+    "../img/hobbies/bonanza2.JPEG",
     "../img/hobbies/bonanza3.jpeg",
     "../img/hobbies/bonanza4.jpeg",
   ],
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "btn-ver-mas-futbol": {
       title: "Fútbol Liga Universitaria - Bonanza",
       description:
-        "Espacio de esparcimiento e integración social fundado para disfrutar de la competencia sana junto a amigos en la liga local.",
+        "Espacio de esparcimiento e integración social fundado para disfrutar de la competencia  junto a amigos en la liga universitaria.",
       images: IMAGENES_PROYECTOS.futbol,
     },
     "btn-ver-mas-familia": {
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "btn-ver-mas-racing": {
       title: "Pasión por Racing",
       description:
-        "Seguimiento activo y acompañamiento incondicional a la Academia. Momentos compartidos que forman parte esencial de mis fines de semana y mi identidad deportiva.",
+        "Seguimiento activo y acompañamiento incondicional a la Academia. Momentos compartidos que forman parte de mi corazon y mi identidad deportiva.",
       images: IMAGENES_PROYECTOS.racing,
     },
   };
@@ -126,20 +126,34 @@ document.addEventListener("DOMContentLoaded", () => {
     // Limpiamos el contenedor
     modalImagesContainer.innerHTML = "";
 
-    // SI TIENE UNA SOLA IMAGEN: Añadimos la clase para manejo de verticales/singulares
+    // SI TIENE UNA SOLA IMAGEN: Añadimos la clase para manejo de singulares
     if (data.images.length === 1) {
       modalImagesContainer.classList.add("has-single-image");
     } else {
       modalImagesContainer.classList.remove("has-single-image");
     }
 
-    data.images.forEach((src) => {
+    // Recorremos las imágenes con su índice para identificar cuál es la primera
+    data.images.forEach((src, index) => {
       const img = document.createElement("img");
       img.src = src;
       img.alt = data.title;
+
+      // Control de errores de carga
       img.onerror = () => {
         img.src = `https://placehold.co/300x200?text=${encodeURIComponent(data.title)}`;
       };
+
+      // CONDICIÓN EXCLUSIVA:
+      // Si es el primer elemento (index 0) de Bonanza ("btn-ver-mas-futbol")
+      // o si pertenece a M2 Blocks ("btn-ver-mas-m2blocks")
+      if (
+        (id === "btn-ver-mas-futbol" && index === 0) ||
+        id === "btn-ver-mas-m2blocks"
+      ) {
+        img.classList.add("img-portrait");
+      }
+
       modalImagesContainer.appendChild(img);
     });
 

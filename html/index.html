@@ -27,8 +27,9 @@
   <body class="fondo">
     <header>
       <nav class="navbar fixed-top">
+        <!-- navbar-glass-container reemplaza los estilos inline de margen y padding -->
         <div
-          class="container-fluid mx-3 my-2 px-4 py-2 navbar-glass d-flex justify-content-between align-content-center"
+          class="container-fluid navbar-glass-container navbar-glass d-flex justify-content-between align-content-center"
         >
           <a class="navbar-brand text-blue-deep fw-bold mi-logo" href="#">
             <i class="bi bi-code-slash"></i>
@@ -86,7 +87,8 @@
               </a>
             </li>
 
-            <div class="vr bg-secondary opacity-25" style="height: 20px"></div>
+            <!-- Separador vertical controlado con la clase nav-divider-custom en CSS -->
+            <div class="vr bg-secondary opacity-25 nav-divider-custom"></div>
 
             <li class="nav-item">
               <button
@@ -103,7 +105,9 @@
         </div>
       </nav>
     </header>
-    <main class="container" style="margin-top: 120px">
+
+    <!-- main-content reemplaza el margen superior inline (margin-top: 120px) -->
+    <main class="container main-content">
       <!-- ==================== SECCIÓN 1: INICIO / HERO ==================== -->
       <section id="inicio" class="row min-vh-75 align-items-center py-5">
         <div class="col-md-7 order-2 order-md-1">
@@ -150,17 +154,17 @@
         </div>
 
         <div class="col-md-5 order-1 order-md-2 text-center mb-4 mb-md-0">
-          <div class="position-relative d-inline-block">
-            <div
-              class="position-absolute top-0 start-0 w-100 h-100 border border-primary rounded-circle translate-middle-x mt-2 ms-2 opacity-25"
-              style="z-index: -1"
-            ></div>
-            <img
-              src="../img/fotomia.jpeg"
-              alt="Sebastian Agunin"
-              class="img-fluid rounded-circle shadow border border-4 border-white"
-              style="width: 320px; height: 320px; object-fit: cover"
-            />
+          <div class="hero-avatar-wrapper">
+            <!-- Fondo decorativo con gradiente y efecto de pulso -->
+            <div class="hero-avatar-glow"></div>
+            <!-- Contenedor que fuerza la forma circular perfecta -->
+            <div class="hero-avatar-container">
+              <img
+                src="../img/fotomia.jpeg"
+                alt="Sebastian Agunin"
+                class="hero-avatar-img"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -306,14 +310,9 @@
             >
               <!-- Tecnicatura -->
               <div class="mb-5 position-relative">
+                <!-- timeline-dot-custom reemplaza la posición absoluta inline -->
                 <div
-                  class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle"
-                  style="
-                    width: 14px;
-                    height: 14px;
-                    margin-left: -25px;
-                    margin-top: 6px;
-                  "
+                  class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle timeline-dot-custom"
                 ></div>
                 <span
                   class="badge bg-primary-subtle text-primary mb-2 rounded-pill fw-semibold"
@@ -342,13 +341,7 @@
               <!-- Licenciatura -->
               <div class="mb-5 position-relative">
                 <div
-                  class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle"
-                  style="
-                    width: 14px;
-                    height: 14px;
-                    margin-left: -25px;
-                    margin-top: 6px;
-                  "
+                  class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle timeline-dot-custom"
                 ></div>
                 <span
                   class="badge bg-primary-subtle text-primary mb-2 rounded-pill fw-semibold"
@@ -377,13 +370,7 @@
               <!-- Secundaria -->
               <div class="position-relative">
                 <div
-                  class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle"
-                  style="
-                    width: 14px;
-                    height: 14px;
-                    margin-left: -25px;
-                    margin-top: 6px;
-                  "
+                  class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle timeline-dot-custom"
                 ></div>
                 <span
                   class="badge bg-primary-subtle text-primary mb-2 rounded-pill fw-semibold"
@@ -525,7 +512,7 @@
                 software. Diseñado completamente con diagramas de clases y
                 secuencia en UML bajo el paradigma POO. Implementación integral
                 en Java nativo de físicas de colisiones, renderizado y gestión
-                de estados para 3 niveles de juego. Utilizamos los conceptor de
+                de estados para 3 niveles de juego. Utilizamos los conceptos de
                 clean code y principios SOLID para mantener un código modular y
                 escalable.
               </p>
@@ -537,7 +524,7 @@
                   ver mas
                 </button>
                 <a
-                  href=" https://github.com/sebagorito/Proyecto-Tecnologia-de-Programacion"
+                  href="https://github.com/sebagorito/Proyecto-Tecnologia-de-Programacion"
                   target="_blank"
                   class="text-secondary hover-primary"
                   data-bs-toggle="tooltip"
@@ -701,11 +688,10 @@
                 Racing club
               </h3>
               <p class="text-muted small m-0" data-value="hobby3-d">
-                Soy hincha de Racing club, un equipo de futbol de Argentina. Soy
-                un gran hincha de este equipo. por mas que no viva en la misma
-                ciudad he viajado para verlos y es una actividad que disfruto
-                mucho. Me gusta mucho el futbol y seguir a mi equipo en todas
-                las competiciones.
+                Soy hincha de Racing club y socio activo. Soy un gran hincha de
+                este equipo. por mas que no viva en la misma ciudad he viajado
+                para verlos y es una actividad que disfruto mucho. Me gusta
+                mucho el futbol y seguir a mi equipo en todas las competiciones.
               </p>
               <button
                 class="btn btn-outline-secondary btn-sm mt-3"
@@ -730,7 +716,9 @@
       </div>
     </footer>
 
-    <!-- Modal Dinámico Único -->
+    <!-- ==================== MODALES ==================== -->
+
+    <!-- Modal Dinámico Único (Proyectos/Detalles) -->
     <div class="custom-modal-overlay" id="custom-modal">
       <div class="custom-modal-card">
         <div class="custom-modal-header">
@@ -750,7 +738,7 @@
       </div>
     </div>
 
-    <!-- ==================== MODAL DE CONTACTO (REDISEÑO PREMIUM OSCURO) ==================== -->
+    <!-- Modal de Contacto (Rediseño Premium Oscuro sin estilos inline) -->
     <div
       class="modal fade"
       id="modalContacto"
@@ -758,81 +746,62 @@
       aria-labelledby="modalContactoLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-dialog-centered" style="max-width: 450px">
-        <!-- Tarjeta con efecto semi-transparente premium (Glassmorphism) -->
+      <div class="modal-dialog modal-dialog-centered modal-contact-dialog">
+        <!-- modal-contact-content reemplaza el borde inline para controlarlo con Glassmorphism en CSS -->
         <div
-          class="modal-content text-light rounded-4 shadow-lg"
-          style="
-            background: rgba(24, 28, 41, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-          "
+          class="modal-content text-light rounded-4 shadow-lg modal-contact-content"
         >
           <!-- Cabecera del Modal -->
           <div
             class="modal-header border-0 pb-0 pt-4 px-4 d-flex justify-content-between align-items-center"
           >
             <h5
-              class="modal-title fw-bold text-white d-flex align-items-center gap-2"
+              class="modal-title fw-bold text-white d-flex align-items-center gap-2 modal-contact-title"
               id="modalContactoLabel"
-              style="font-size: 1.25rem; letter-spacing: -0.5px"
             >
               <i class="bi bi-chat-right-text text-primary"></i> ¡Hablemos!
             </h5>
             <button
               type="button"
-              class="btn-close btn-close-white opacity-75"
+              class="btn-close btn-close-white opacity-75 btn-close-custom"
               data-bs-dismiss="modal"
               aria-label="Close"
-              style="font-size: 0.8rem"
             ></button>
           </div>
 
           <!-- Cuerpo del Modal -->
           <div class="modal-body px-4 py-3">
-            <p
-              class="text-secondary mb-4"
-              style="font-size: 0.9rem; line-height: 1.5"
-            >
+            <p class="text-secondary mb-4 modal-contact-text">
               Elegí la forma que te resulte más cómoda para ponerte en contacto
               conmigo. Respondo lo antes posible.
             </p>
 
-            <!-- SECCIÓN EMAIL: Tarjeta integrada y limpia (sin inputs toscos de formulario) -->
-            <div
-              class="p-3 rounded-4 mb-4"
-              style="
-                background: rgba(255, 255, 255, 0.03);
-                border: 1px solid rgba(255, 255, 255, 0.06);
-              "
-            >
+            <!-- SECCIÓN EMAIL: Tarjeta integrada sin inputs -->
+            <div class="p-3 rounded-4 mb-4 modal-contact-card">
               <span
-                class="text-secondary d-block mb-2 fw-semibold"
-                style="font-size: 0.75rem; uppercase; letter-spacing: 0.5px;"
-                >CORREO ELECTRÓNICO</span
+                class="text-secondary d-block mb-2 fw-semibold small letter-spacing-custom"
               >
+                CORREO ELECTRÓNICO
+              </span>
               <div
-                class="d-flex align-items-center justify-content-between bg-dark rounded-3 p-2 px-3"
-                style="border: 1px solid rgba(255, 255, 255, 0.05)"
+                class="d-flex align-items-center justify-content-between bg-dark rounded-3 p-2 px-3 email-box-border"
               >
                 <div class="d-flex align-items-center gap-2 overflow-hidden">
                   <i class="bi bi-envelope text-primary"></i>
                   <span
                     id="user-email-text"
-                    class="text-white-50 font-monospace"
-                    style="font-size: 0.95rem; user-select: all"
-                    >sebagorito@gmail.com</span
+                    class="text-white-50 font-monospace text-email-selectable"
                   >
+                    sebagorito@gmail.com
+                  </span>
                 </div>
                 <button
-                  class="btn p-1 text-primary hover-white transition-all"
+                  class="btn p-1 text-primary hover-white transition-all btn-copy-transparent"
                   type="button"
                   id="btn-copiar-mail"
                   data-bs-toggle="tooltip"
                   data-bs-placement="top"
                   title="Copiar mail"
-                  style="border: none; background: transparent"
                   onclick="
                     navigator.clipboard.writeText('sebagorito@gmail.com');
                     this.innerHTML =
@@ -851,49 +820,30 @@
 
             <!-- Redes de contacto -->
             <span
-              class="text-secondary d-block mb-2 fw-semibold px-1"
-              style="font-size: 0.75rem; uppercase; letter-spacing: 0.5px;"
-              >ENLACES DIRECTOS</span
+              class="text-secondary d-block mb-2 fw-semibold px-1 small letter-spacing-custom"
             >
+              ENLACES DIRECTOS
+            </span>
             <div class="d-flex flex-column gap-2">
               <!-- LinkedIn -->
               <a
                 href="https://www.linkedin.com/in/sebastian-agunin/"
                 target="_blank"
-                class="d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none transition-all"
-                style="
-                  background: rgba(255, 255, 255, 0.02);
-                  border: 1px solid rgba(255, 255, 255, 0.04);
-                  transition:
-                    background 0.2s ease,
-                    transform 0.2s ease;
-                "
-                onmouseover="
-                  this.style.background = 'rgba(255, 255, 255, 0.06)';
-                  this.style.transform = 'translateY(-1px)';
-                "
-                onmouseout="
-                  this.style.background = 'rgba(255, 255, 255, 0.02)';
-                  this.style.transform = 'none';
-                "
+                class="d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none transition-all modal-contact-link"
               >
                 <div class="d-flex align-items-center gap-3">
                   <i class="bi bi-linkedin text-primary fs-5"></i>
                   <div>
-                    <h6
-                      class="mb-0 text-white fw-semibold"
-                      style="font-size: 0.9rem"
-                    >
+                    <h6 class="mb-0 text-white fw-semibold label-link-size">
                       LinkedIn
                     </h6>
-                    <small class="text-secondary" style="font-size: 0.75rem"
-                      >Conectemos profesionalmente</small
-                    >
+                    <small class="text-secondary desc-link-size">
+                      Conectemos profesionalmente
+                    </small>
                   </div>
                 </div>
                 <i
-                  class="bi bi-arrow-up-right text-secondary"
-                  style="font-size: 0.8rem"
+                  class="bi bi-arrow-up-right text-secondary icon-arrow-size"
                 ></i>
               </a>
 
@@ -901,40 +851,21 @@
               <a
                 href="https://github.com/sebagorito"
                 target="_blank"
-                class="d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none transition-all"
-                style="
-                  background: rgba(255, 255, 255, 0.02);
-                  border: 1px solid rgba(255, 255, 255, 0.04);
-                  transition:
-                    background 0.2s ease,
-                    transform 0.2s ease;
-                "
-                onmouseover="
-                  this.style.background = 'rgba(255, 255, 255, 0.06)';
-                  this.style.transform = 'translateY(-1px)';
-                "
-                onmouseout="
-                  this.style.background = 'rgba(255, 255, 255, 0.02)';
-                  this.style.transform = 'none';
-                "
+                class="d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none transition-all modal-contact-link"
               >
                 <div class="d-flex align-items-center gap-3">
                   <i class="bi bi-github text-white fs-5"></i>
                   <div>
-                    <h6
-                      class="mb-0 text-white fw-semibold"
-                      style="font-size: 0.9rem"
-                    >
+                    <h6 class="mb-0 text-white fw-semibold label-link-size">
                       GitHub
                     </h6>
-                    <small class="text-secondary" style="font-size: 0.75rem"
-                      >Revisá mis repositorios y código</small
-                    >
+                    <small class="text-secondary desc-link-size">
+                      Revisá mis repositorios y código
+                    </small>
                   </div>
                 </div>
                 <i
-                  class="bi bi-arrow-up-right text-secondary"
-                  style="font-size: 0.8rem"
+                  class="bi bi-arrow-up-right text-secondary icon-arrow-size"
                 ></i>
               </a>
 
@@ -942,78 +873,41 @@
               <a
                 href="https://www.instagram.com/sebaagunin/"
                 target="_blank"
-                class="d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none transition-all"
-                style="
-                  background: rgba(255, 255, 255, 0.02);
-                  border: 1px solid rgba(255, 255, 255, 0.04);
-                  transition:
-                    background 0.2s ease,
-                    transform 0.2s ease;
-                "
-                onmouseover="
-                  this.style.background = 'rgba(255, 255, 255, 0.06)';
-                  this.style.transform = 'translateY(-1px)';
-                "
-                onmouseout="
-                  this.style.background = 'rgba(255, 255, 255, 0.02)';
-                  this.style.transform = 'none';
-                "
+                class="d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none transition-all modal-contact-link"
               >
                 <div class="d-flex align-items-center gap-3">
                   <i class="bi bi-instagram text-danger fs-5"></i>
                   <div>
-                    <h6
-                      class="mb-0 text-white fw-semibold"
-                      style="font-size: 0.9rem"
-                    >
+                    <h6 class="mb-0 text-white fw-semibold label-link-size">
                       Instagram
                     </h6>
-                    <small class="text-secondary" style="font-size: 0.75rem"
-                      >Un poco más sobre mi día a día</small
-                    >
+                    <small class="text-secondary desc-link-size">
+                      Un poco más sobre mi día a día
+                    </small>
                   </div>
                 </div>
                 <i
-                  class="bi bi-arrow-up-right text-secondary"
-                  style="font-size: 0.8rem"
+                  class="bi bi-arrow-up-right text-secondary icon-arrow-size"
                 ></i>
               </a>
             </div>
           </div>
 
-          <!-- Pie del Modal con el botón de envío directo funcional -->
+          <!-- Pie del Modal -->
           <div
             class="modal-footer border-0 pt-2 pb-4 px-4 justify-content-center"
           >
             <a
               href="mailto:sebagorito@gmail.com"
-              class="btn rounded-pill w-100 fw-semibold d-flex align-items-center justify-content-center gap-2 py-2-5 transition-all"
-              style="
-                background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
-                color: #fff;
-                border: none;
-                box-shadow: 0 4px 15px rgba(13, 110, 253, 0.2);
-                font-size: 0.95rem;
-                transition:
-                  transform 0.2s,
-                  box-shadow 0.2s;
-              "
-              onmouseover="
-                this.style.transform = 'scale(1.02)';
-                this.style.boxShadow = '0 6px 20px rgba(13, 110, 253, 0.35)';
-              "
-              onmouseout="
-                this.style.transform = 'none';
-                this.style.boxShadow = '0 4px 15px rgba(13, 110, 253, 0.2)';
-              "
+              class="btn rounded-pill w-100 fw-semibold d-flex align-items-center justify-content-center gap-2 transition-all btn-contact-send"
             >
-              <i class="bi bi-send-fill" style="font-size: 0.85rem"></i> Enviar
-              correo directo
+              <i class="bi bi-send-fill"></i> Enviar correo directo
             </a>
           </div>
         </div>
       </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/scripts.js"></script>
   </body>
