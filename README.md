@@ -1,18 +1,24 @@
 # 💻 Sebastian Agunin - Personal Portfolio Web
 
-Este repositorio contiene el código fuente de mi portfolio web personal. El objetivo de este proyecto es presentar mi trayectoria académica en las Ciencias de la Computación, mis habilidades de desarrollo frontend y mis proyectos más destacados, todo bajo una interfaz de usuario moderna, fluida y con un enfoque marcadamente técnico.
+Este repositorio contiene el código fuente de mi portfolio web personal. El objetivo de este proyecto es presentar mi trayectoria académica en Ciencias de la Computación y la Tecnicatura en Programación Web y Móvil, mis habilidades de desarrollo frontend y mis proyectos más destacados, todo bajo una interfaz de usuario moderna, fluida y con un enfoque técnico cuidado. Además, incluyo una sección personal para dar a conocer mis pasiones fuera del código.
+
+---
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **Frontend:** HTML5 semántico, CSS3 personalizado y JavaScript moderno (ES6+).
-- **Framework de Estilos:** Bootstrap 5 (con personalizaciones dinámicas).
+- **Frontend:** HTML5 semántico, CSS3 personalizado y JavaScript ES6+ (arquitectura modular con manipulación dinámica del DOM).
+- **Framework de Estilos:** Bootstrap 5 (con clases personalizadas e integración de Glassmorphism).
 - **Iconografía:** Bootstrap Icons.
-- **Tipografías:** *Space Grotesk* (para una estética tech en títulos) y *JetBrains Mono* (fuente monospace de programación para elementos interactivos).
-- **Efectos visuales:** Estilo *Glassmorphism* (vidrio esmerilado con desenfoque de fondo en barra de navegación y modales).
+- **Internacionalización (i18n):** Sistema propio en JavaScript nativo utilizando `localStorage` para traducción en tiempo real.
+
+---
 
 ## 🌟 Características Destacadas
 
-- **Diseño Ultra-Responsivo:** Adaptado meticulosamente para dispositivos móviles, tablets y monitores de escritorio.
-- **Dark Mode Nativo:** Una paleta de colores oscuros profundos con acentos azulados y blancos de alto contraste para evitar la fatiga visual.
-- **Modal de Contacto Interactivo:** Un modal de estilo premium que reemplaza los clásicos enlaces `mailto:`, permitiendo copiar mi dirección de correo al portapapeles con un solo click (con feedback visual de confirmación) o acceder directamente a mis canales profesionales de manera integrada.
-- **Sección de Intereses No-Técnicos:** Un espacio dedicado a mostrar mis pasiones fuera del código (Futsal en Villa Mitre, Bonanza FC, Impresión 3D y mi fanatismo por Racing Club).
+- **Soporte Multilingüe (i18n ES / EN):** Sistema conmutador de idioma en el navbar que traduce dinámicamente todo el contenido de la web, incluyendo las descripciones técnicas de los proyectos y los modales, manteniendo la preferencia elegida mediante `localStorage`.
+- **Diseño Responsivo:** Adaptado meticulosamente para dispositivos móviles, tablets y pantallas de alta resolución.
+- **UI Estilo Glassmorphism / Dark Mode:** Interfaz con efectos de traslucidez, bordes sutiles y contraste optimizado para reducir la fatiga visual.
+- **Modales Dinámicos:**
+  - **Galería / Proyectos:** Visualizador centralizado con manejo adaptativo para imágenes individuales o en cuadrícula, optimizado para formatos *portrait* y *landscape*.
+  - **Contacto:** Modal con función interactiva para copiar la dirección de correo directamente al portapapeles (con feedback visual dinámico) y accesos directos a perfiles profesionales y redes.
+- **Sección de Intereses:** Un espacio dedicado a mis actividades y pasiones fuera de la programación (Futsal en Club Villa Mitre, Fútbol en la Liga Universitaria con Bonanza, Impresión/Diseño 3D y seguimiento de Racing Club).
