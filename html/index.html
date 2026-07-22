@@ -92,7 +92,7 @@
 
             <li class="nav-item">
               <button
-                id="btn-idioma"
+                id="btn-language"
                 class="btn btn-idioma-custom d-flex align-items-center gap-1 py-1 px-2"
                 data-bs-toggle="tooltip"
                 title="Cambiar idioma / Change language"
@@ -113,18 +113,19 @@
         <div class="col-md-7 order-2 order-md-1">
           <span
             class="badge bg-primary-subtle text-primary mb-3 px-3 py-2 rounded-pill fw-semibold"
-            data-value="hero-bienvenida"
+            data-i18n="hero.bienvenida"
           >
             ¡Hola, bienvenido/a!
           </span>
           <h1 class="display-4 fw-bold text-blue-deep mb-3">
-            <span data-value="hero-saludo">Soy</span>
+            <span data-i18n="hero.saludo">Soy</span>
             <span class="text-primary">Sebastian Agunin</span>
           </h1>
-          <h2 class="h4 text-secondary mb-4" data-value="hero-rol">
-            Estudiante Avanzado de Computación & Desarrollador Web
+          <h2 class="h4 text-secondary mb-4" data-i18n="hero.rol">
+            Estudiante Avanzado de Licenciatura en Ciencias de la Computación &
+            Tecnicatura en Programacion Web y movil
           </h2>
-          <p class="lead text-muted mb-4" data-value="hero-descripcion">
+          <p class="lead text-muted mb-4" data-i18n="hero.descripcion">
             Me apasiona aprender nuevas tecnologías, ser innovador y creativo.
             Busco siempre mejorar mis habilidades para crear soluciones lo más
             eficientes posibles, adaptadas a las necesidades de la actualidad.
@@ -139,14 +140,14 @@
               class="btn btn-primary px-4 py-2 rounded-pill fw-medium"
               data-bs-toggle="modal"
               data-bs-target="#modalContacto"
-              data-value="hero-btn-contacto"
+              data-i18n="hero.btn-contacto"
             >
               Contáctame
             </button>
             <a
               href="#proyectos"
               class="btn btn-outline-secondary px-4 py-2 rounded-pill fw-medium"
-              data-value="hero-btn-proyectos"
+              data-i18n="hero.btn-proyectos"
             >
               Ver proyectos
             </a>
@@ -177,19 +178,19 @@
           <div class="col-lg-7">
             <div class="d-flex align-items-center gap-2 mb-3">
               <i class="bi bi-person-badge text-primary fs-3"></i>
-              <h2 class="fw-bold m-0 text-blue-deep" data-value="sobre-titulo">
+              <h2 class="fw-bold m-0 text-blue-deep" data-i18n="sobre.titulo">
                 Sobre mí
               </h2>
             </div>
 
             <div class="text-muted">
-              <p class="mb-3" data-value="sobre-p1">
+              <p class="mb-3" data-i18n="sobre.p1">
                 Soy un estudiante de Ciencias de la Computación con un enfoque
                 marcadamente práctico y una mentalidad analítica. Me destaco por
                 mi capacidad para resolver problemas técnicos de forma creativa
                 y por mi firme compromiso con la optimización de procesos.
               </p>
-              <p class="mb-4" data-value="sobre-p2">
+              <p class="mb-4" data-i18n="sobre.p2">
                 Disfruto mucho del trabajo en equipo, enfrentando desafíos
                 lógicos y buscando siempre aportar la máxima eficiencia en cada
                 proyecto técnico que emprendo, ya sea modelando sistemas o
@@ -229,7 +230,7 @@
             <div class="p-4 rounded-4 bg-white shadow-sm border border-light">
               <h3
                 class="h5 fw-bold mb-4 text-blue-deep"
-                data-value="sobre-skills-titulo"
+                data-i18n="sobre.skills-titulo"
               >
                 Habilidades
               </h3>
@@ -241,11 +242,11 @@
                 <div>
                   <h4
                     class="h6 fw-bold m-0 text-blue-deep"
-                    data-value="skill1-t"
+                    data-i18n="sobre.skill1-t"
                   >
                     Desarrollo Frontend
                   </h4>
-                  <small class="text-muted" data-value="skill1-d"
+                  <small class="text-muted" data-i18n="sobre.skill1-d"
                     >Experiencia con React, JavaScript (ES6+), HTML5, CSS y
                     Bootstrap.</small
                   >
@@ -259,11 +260,11 @@
                 <div>
                   <h4
                     class="h6 fw-bold m-0 text-blue-deep"
-                    data-value="skill2-t"
+                    data-i18n="sobre.skill2-t"
                   >
                     Modelado y POO
                   </h4>
-                  <small class="text-muted" data-value="skill2-d"
+                  <small class="text-muted" data-i18n="sobre.skill2-d"
                     >Diseño Orientado a Objetos y modelado de sistemas complejos
                     con UML.</small
                   >
@@ -277,11 +278,11 @@
                 <div>
                   <h4
                     class="h6 fw-bold m-0 text-blue-deep"
-                    data-value="skill3-t"
+                    data-i18n="sobre.skill3-t"
                   >
                     Multi-paradigma
                   </h4>
-                  <small class="text-muted" data-value="skill3-d font-monospace"
+                  <small class="text-muted" data-i18n="sobre.skill3-d"
                     >Dominio de lógica abstracta con Java, C y paradigma lógico
                     en Prolog.</small
                   >
@@ -298,7 +299,7 @@
       <section id="estudios" class="py-5">
         <div class="d-flex align-items-center gap-2 mb-5">
           <i class="bi bi-mortarboard-fill text-primary fs-3"></i>
-          <h2 class="fw-bold m-0 text-blue-deep" data-value="estudios-titulo">
+          <h2 class="fw-bold m-0 text-blue-deep" data-i18n="estudios.titulo">
             Educación
           </h2>
         </div>
@@ -316,22 +317,25 @@
                 ></div>
                 <span
                   class="badge bg-primary-subtle text-primary mb-2 rounded-pill fw-semibold"
-                  data-value="edu1-fecha"
+                  data-i18n="estudios.edu1-fecha"
                   >2026 - Actualidad</span
                 >
                 <h3
                   class="h5 fw-bold text-blue-deep m-0"
-                  data-value="edu1-titulo"
+                  data-i18n="estudios.edu1-titulo"
                 >
                   Tecnicatura en Programación Web y Móvil
                 </h3>
                 <h4
                   class="h6 text-muted mb-2 fw-medium"
-                  data-value="edu1-institucion"
+                  data-i18n="estudios.edu1-institucion"
                 >
                   Universidad Nacional del Sur
                 </h4>
-                <p class="text-muted small mb-0" data-value="edu1-descripcion">
+                <p
+                  class="text-muted small mb-0"
+                  data-i18n="estudios.edu1-descripcion"
+                >
                   Enfoque técnico enfocado en la construcción de interfaces
                   adaptables, optimización de entornos móviles y arquitecturas
                   web modernas.
@@ -345,22 +349,25 @@
                 ></div>
                 <span
                   class="badge bg-primary-subtle text-primary mb-2 rounded-pill fw-semibold"
-                  data-value="edu2-fecha"
+                  data-i18n="estudios.edu2-fecha"
                   >2021 - Actualidad</span
                 >
                 <h3
                   class="h5 fw-bold text-blue-deep m-0"
-                  data-value="edu2-titulo"
+                  data-i18n="estudios.edu2-titulo"
                 >
                   Licenciatura en Ciencias de la Computación
                 </h3>
                 <h4
                   class="h6 text-muted mb-2 fw-medium"
-                  data-value="edu2-institucion"
+                  data-i18n="estudios.edu2-institucion"
                 >
                   Universidad Nacional del Sur
                 </h4>
-                <p class="text-muted small mb-0" data-value="edu2-descripcion">
+                <p
+                  class="text-muted small mb-0"
+                  data-i18n="estudios.edu2-descripcion"
+                >
                   Formación avanzada y analítica basada en fundamentos lógicos,
                   diseño de algoritmos, análisis de complejidad y desarrollo de
                   software robusto.
@@ -374,22 +381,25 @@
                 ></div>
                 <span
                   class="badge bg-primary-subtle text-primary mb-2 rounded-pill fw-semibold"
-                  data-value="edu3-fecha"
+                  data-i18n="estudios.edu3-fecha"
                   >2015 - 2017</span
                 >
                 <h3
                   class="h5 fw-bold text-blue-deep m-0"
-                  data-value="edu3-titulo"
+                  data-i18n="estudios.edu3-titulo"
                 >
                   Bachiller en Informática
                 </h3>
                 <h4
                   class="h6 text-muted mb-2 fw-medium"
-                  data-value="edu3-institucion"
+                  data-i18n="estudios.edu3-institucion"
                 >
                   Escuela Superior de Comercio (UNS)
                 </h4>
-                <p class="text-muted small mb-0" data-value="edu3-descripcion">
+                <p
+                  class="text-muted small mb-0"
+                  data-i18n="estudios.edu3-descripcion"
+                >
                   Primeros pasos orientados a la tecnología, fundamentos de
                   desarrollo de software y sistemas de información informática.
                 </p>
@@ -405,7 +415,7 @@
       <section id="proyectos" class="py-5">
         <div class="d-flex align-items-center gap-2 mb-4">
           <i class="bi bi-folder-fill text-primary fs-3"></i>
-          <h2 class="fw-bold m-0 text-blue-deep" data-value="proyectos-titulo">
+          <h2 class="fw-bold m-0 text-blue-deep" data-i18n="proyectos.titulo">
             Proyectos Académicos
           </h2>
         </div>
@@ -421,11 +431,11 @@
               >
               <h3
                 class="h5 fw-bold text-blue-deep mb-2"
-                data-value="proj1-titulo"
+                data-i18n="proyectos.proj1-titulo"
               >
                 E-commerce
               </h3>
-              <p class="text-muted small" data-value="proj1-desc">
+              <p class="text-muted small" data-i18n="proyectos.proj1-desc">
                 Co-desarrollo de una plataforma web Serverless con arquitectura
                 limpia en JavaScript (ES6) y Bootstrap 5. Programé la lógica de
                 negocio en el cliente, gestioné la persistencia de datos
@@ -462,11 +472,11 @@
               >
               <h3
                 class="h5 fw-bold text-blue-deep mb-2"
-                data-value="proj1-titulo"
+                data-i18n="proyectos.proj1-titulo"
               >
                 M2 Blocks
               </h3>
-              <p class="text-muted small" data-value="proj1-desc">
+              <p class="text-muted small" data-i18n="proyectos.proj1-desc">
                 Desarrollo en equipo de una implementación híbrida de juego.
                 Diseñado utilizando React para la construcción de una interfaz
                 de usuario limpia e interactiva en el frontend, integrada de
@@ -503,11 +513,11 @@
               >
               <h3
                 class="h5 fw-bold text-blue-deep mb-2"
-                data-value="proj2-titulo"
+                data-i18n="proyectos.proj2-titulo"
               >
                 Recreación de Super Mario Bros
               </h3>
-              <p class="text-muted small" data-value="proj2-desc">
+              <p class="text-muted small" data-i18n="proyectos.proj2-desc">
                 Proyecto colaborativo enfocado en modelado y arquitectura de
                 software. Diseñado completamente con diagramas de clases y
                 secuencia en UML bajo el paradigma POO. Implementación integral
@@ -544,10 +554,7 @@
       <section id="experiencia" class="py-5">
         <div class="d-flex align-items-center gap-2 mb-4">
           <i class="bi bi-briefcase-fill text-primary fs-3"></i>
-          <h2
-            class="fw-bold m-0 text-blue-deep"
-            data-value="experiencia-titulo"
-          >
+          <h2 class="fw-bold m-0 text-blue-deep" data-i18n="experiencia.titulo">
             Experiencia Laboral
           </h2>
         </div>
@@ -560,10 +567,16 @@
               <div class="text-primary mb-3">
                 <i class="bi bi-box-seam fs-3"></i>
               </div>
-              <h3 class="h5 fw-bold text-blue-deep mb-2" data-value="hobby2-t">
+              <h3
+                class="h5 fw-bold text-blue-deep mb-2"
+                data-i18n="hobbies.hobby2-titulo"
+              >
                 Impresión & Diseño 3D
               </h3>
-              <p class="text-muted small m-0" data-value="hobby2-d">
+              <p
+                class="text-muted small m-0"
+                data-i18n="hobbies.hobby2-descripcion"
+              >
                 Gestioné una flota de 30 unidades de impresión en simultáneo.
                 Aprendí optimización de recursos en flujos de trabajo, modelado
                 de piezas funcionales y *troubleshooting* técnico avanzado tanto
@@ -574,6 +587,7 @@
                 data-bs-toggle="modal"
                 data-bs-target="#modalImpresion3D"
                 id="btn-ver-mas-impresion3d"
+                data-i18n="hobbies.hobby2-btn"
               >
                 ver mas
               </button>
@@ -588,7 +602,7 @@
       <section id="intereses" class="py-5">
         <div class="d-flex align-items-center gap-2 mb-4">
           <i class="bi bi-heart-fill text-primary fs-3"></i>
-          <h2 class="fw-bold m-0 text-blue-deep" data-value="intereses-titulo">
+          <h2 class="fw-bold m-0 text-blue-deep" data-i18n="intereses.titulo">
             Más allá del código
           </h2>
         </div>
@@ -602,10 +616,16 @@
               <div class="text-primary mb-3">
                 <i class="bi bi-dribbble fs-3"></i>
               </div>
-              <h3 class="h5 fw-bold text-blue-deep mb-2" data-value="hobby1-t">
+              <h3
+                class="h5 fw-bold text-blue-deep mb-2"
+                data-i18n="hobbies.hobby1-titulo"
+              >
                 Futsal Liga del Sur
               </h3>
-              <p class="text-muted small m-0" data-value="hobby1-d">
+              <p
+                class="text-muted small m-0"
+                data-i18n="hobbies.hobby1-descripcion"
+              >
                 Practico futsal hace más de cinco años en la Liga del Sur y
                 actualmente juego en el club Villa Mitre. Es el deporte que más
                 amo y disfruto, ya que me permite desconectarme de la rutina y
@@ -630,10 +650,16 @@
               <div class="text-primary mb-3">
                 <i class="bi bi-dribbble fs-3"></i>
               </div>
-              <h3 class="h5 fw-bold text-blue-deep mb-2" data-value="hobby3-t">
+              <h3
+                class="h5 fw-bold text-blue-deep mb-2"
+                data-i18n="hobbies.hobby3-titulo"
+              >
                 Futbol Liga Universitaria
               </h3>
-              <p class="text-muted small m-0" data-value="hobby3-d">
+              <p
+                class="text-muted small m-0"
+                data-i18n="hobbies.hobby3-descripcion"
+              >
                 Bonanza es un equipo de la Liga Universitaria de Bahía Blanca
                 que fundé hace tres años y en el cual juego desde entonces. Aquí
                 comparto la cancha con todos mis amigos; disfruto muchísimo
@@ -658,10 +684,16 @@
               <div class="text-primary mb-3">
                 <i class="bi bi-people fs-3"></i>
               </div>
-              <h3 class="h5 fw-bold text-blue-deep mb-2" data-value="hobby3-t">
+              <h3
+                class="h5 fw-bold text-blue-deep mb-2"
+                data-i18n="hobbies.hobby4-titulo"
+              >
                 Mi familia
               </h3>
-              <p class="text-muted small m-0" data-value="hobby3-d">
+              <p
+                class="text-muted small m-0"
+                data-i18n="hobbies.hobby4-descripcion"
+              >
                 Tengo una familia numerosa con la que disfruto mucho pasar el
                 tiempo y compartir momentos. Siempre me han apoyado en cada una
                 de mis decisiones y me han enseñado valores fundamentales para
@@ -685,10 +717,16 @@
               <div class="text-primary mb-3">
                 <i class="bi bi-footballracr fs-3"></i>
               </div>
-              <h3 class="h5 fw-bold text-blue-deep mb-2" data-value="hobby3-t">
+              <h3
+                class="h5 fw-bold text-blue-deep mb-2"
+                data-i18n="hobbies.hobby5-titulo"
+              >
                 Racing club
               </h3>
-              <p class="text-muted small m-0" data-value="hobby3-d">
+              <p
+                class="text-muted small m-0"
+                data-i18n="hobbies.hobby5-descripcion"
+              >
                 Soy hincha de Racing club y socio activo. Soy un gran hincha de
                 este equipo. por mas que no viva en la misma ciudad he viajado
                 para verlos y es una actividad que disfruto mucho. Me gusta
@@ -712,11 +750,10 @@
       <div class="container text-center">
         <p class="small text-muted m-0">
           © 2026 Sebastian Agunin.
-          <span data-value="footer-texto">Hecho con mucho ♥ .</span>
+          <span data-i18n="footer.texto">Hecho con mucho ♥ .</span>
         </p>
       </div>
     </footer>
-
     <!-- ==================== MODALES ==================== -->
 
     <!-- Modal Dinámico Único (Proyectos/Detalles) -->
@@ -748,7 +785,6 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered modal-contact-dialog">
-        <!-- modal-contact-content reemplaza el borde inline para controlarlo con Glassmorphism en CSS -->
         <div
           class="modal-content text-light rounded-4 shadow-lg modal-contact-content"
         >
@@ -760,7 +796,8 @@
               class="modal-title fw-bold text-white d-flex align-items-center gap-2 modal-contact-title"
               id="modalContactoLabel"
             >
-              <i class="bi bi-chat-right-text text-primary"></i> ¡Hablemos!
+              <i class="bi bi-chat-right-text text-primary"></i>
+              <span data-i18n="contacto.titulo">¡Hablemos!</span>
             </h5>
             <button
               type="button"
@@ -772,7 +809,10 @@
 
           <!-- Cuerpo del Modal -->
           <div class="modal-body px-4 py-3">
-            <p class="text-secondary mb-4 modal-contact-text">
+            <p
+              class="text-secondary mb-4 modal-contact-text"
+              data-i18n="contacto.subtitulo"
+            >
               Elegí la forma que te resulte más cómoda para ponerte en contacto
               conmigo. Respondo lo antes posible.
             </p>
@@ -781,6 +821,7 @@
             <div class="p-3 rounded-4 mb-4 modal-contact-card">
               <span
                 class="text-secondary d-block mb-2 fw-semibold small letter-spacing-custom"
+                data-i18n="contacto.label-email"
               >
                 CORREO ELECTRÓNICO
               </span>
@@ -822,6 +863,7 @@
             <!-- Redes de contacto -->
             <span
               class="text-secondary d-block mb-2 fw-semibold px-1 small letter-spacing-custom"
+              data-i18n="contacto.label-redes"
             >
               ENLACES DIRECTOS
             </span>
@@ -838,7 +880,10 @@
                     <h6 class="mb-0 text-white fw-semibold label-link-size">
                       LinkedIn
                     </h6>
-                    <small class="text-secondary desc-link-size">
+                    <small
+                      class="text-secondary desc-link-size"
+                      data-i18n="contacto.linkedin-desc"
+                    >
                       Conectemos profesionalmente
                     </small>
                   </div>
@@ -860,7 +905,10 @@
                     <h6 class="mb-0 text-white fw-semibold label-link-size">
                       GitHub
                     </h6>
-                    <small class="text-secondary desc-link-size">
+                    <small
+                      class="text-secondary desc-link-size"
+                      data-i18n="contacto.github-desc"
+                    >
                       Revisá mis repositorios y código
                     </small>
                   </div>
@@ -882,7 +930,10 @@
                     <h6 class="mb-0 text-white fw-semibold label-link-size">
                       Instagram
                     </h6>
-                    <small class="text-secondary desc-link-size">
+                    <small
+                      class="text-secondary desc-link-size"
+                      data-i18n="contacto.instagram-desc"
+                    >
                       Un poco más sobre mi día a día
                     </small>
                   </div>
@@ -902,14 +953,17 @@
               href="mailto:sebagorito@gmail.com"
               class="btn rounded-pill w-100 fw-semibold d-flex align-items-center justify-content-center gap-2 transition-all btn-contact-send"
             >
-              <i class="bi bi-send-fill"></i> Enviar correo directo
+              <i class="bi bi-send-fill"></i>
+              <span data-i18n="contacto.btn-direct-email"
+                >Enviar correo directo</span
+              >
             </a>
           </div>
         </div>
       </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/scripts.js"></script>
+    <script src="../js/translate.js"></script>
   </body>
 </html>
